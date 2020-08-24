@@ -1,18 +1,24 @@
 #we use java
 language: java
 
+env:
+  global:
+    secure: mEdWbanq87zkmbg/NTuaof/8zCSwpsvfEpAOP9M1Z/NRmj6DQ6Roq8XodImD5XSgJQARaacAylJc5clp39N3xqv3VRtLv25RpCkDqAdOVACH8o+YvQsWHiDbpnbvXSOBLrzUlVQ9ZA8U+j5nVbnGLH99G/TfUCk0E7nQtXMxmmkmLYsTp7j9x+zAsV/zwrqqz6iTKgd3E8oiRREV5jfZdnjHBR/1ecLMoQCaZljJISKGaNoZ090va0IwG6IQHTSb8Hhh2L9/DOayu/I6Tp2sHHUioIY+rkp+kq5icaiuM/WSPci6t0sEaQ6jps4vD6+yGDVdk48t1yU7goX68DkJGF34/LwGWnNlnPl8S867YLBkpeOrEopyPd9oMpECuN/n9ZwfZ/J7amXUaTAV0/kUkF110NkNx2WtWC/1BB+kIxOHb4W6zpwlUhQZmJrX/6llCZ4dU0Q5P91+QmMQbZCIchDEINc+mkgobVsST4MtKx8/9ZnViYInfXqlV4+SlB1nFbkYoMIeUKL7EgR67Su+HTmUfx9D0b56P3j1MH8dpnjUUV+Igv7eoIxcG1e0dDgnJEnMrstTfsr1xvuNeMofl/aZW+wyWOFHnKNWEEcp0oBz8nYU/TEeF5+hc5o73DHC2cqk7DIGPvorQFcwP8d2lkXXWiA5vxlziDomrMLtnAQ=
+
 #we add the java development kit (jdk)
 jdk:
   - openjdk11
+
 services:
   #Linking Travis CI and Docker
   - docker
 # SonarCloud
 addons:
   sonarcloud:
-    organization: "spring-boot-cicd"
+    organization: spring-boot-cicd
     token:
-      secure: $SONAR_TOKEN # encrypted value of your token
+      # encrypted value of your token
+      secure: mEdWbanq87zkmbg/NTuaof/8zCSwpsvfEpAOP9M1Z/NRmj6DQ6Roq8XodImD5XSgJQARaacAylJc5clp39N3xqv3VRtLv25RpCkDqAdOVACH8o+YvQsWHiDbpnbvXSOBLrzUlVQ9ZA8U+j5nVbnGLH99G/TfUCk0E7nQtXMxmmkmLYsTp7j9x+zAsV/zwrqqz6iTKgd3E8oiRREV5jfZdnjHBR/1ecLMoQCaZljJISKGaNoZ090va0IwG6IQHTSb8Hhh2L9/DOayu/I6Tp2sHHUioIY+rkp+kq5icaiuM/WSPci6t0sEaQ6jps4vD6+yGDVdk48t1yU7goX68DkJGF34/LwGWnNlnPl8S867YLBkpeOrEopyPd9oMpECuN/n9ZwfZ/J7amXUaTAV0/kUkF110NkNx2WtWC/1BB+kIxOHb4W6zpwlUhQZmJrX/6llCZ4dU0Q5P91+QmMQbZCIchDEINc+mkgobVsST4MtKx8/9ZnViYInfXqlV4+SlB1nFbkYoMIeUKL7EgR67Su+HTmUfx9D0b56P3j1MH8dpnjUUV+Igv7eoIxcG1e0dDgnJEnMrstTfsr1xvuNeMofl/aZW+wyWOFHnKNWEEcp0oBz8nYU/TEeF5+hc5o73DHC2cqk7DIGPvorQFcwP8d2lkXXWiA5vxlziDomrMLtnAQ=
 
 before_install:
   - mvn clean
