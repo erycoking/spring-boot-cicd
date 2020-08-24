@@ -13,6 +13,7 @@ public class CicdApplication {
 
 	@GetMapping("/")
 	public Mono<ResponseEntity<String>> sayHello() {
+		// say hello
 		return Mono.just(ResponseEntity.ok().body("Hi there!!! Hooray you just configured ci cd successfully"));
 	}
 
