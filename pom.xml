@@ -16,7 +16,6 @@
 
 	<properties>
 		<java.version>11</java.version>
-
 		<!-- solving error : Invalid or corrupt jarfile /app.jar -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -189,4 +188,43 @@
 		</plugins>
 	</build>
 
+	<!-- Useful for GitHub site  -->
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.0.0</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>index</report>
+							<report>licenses</report>
+							<report>dependency-info</report>
+							<report>ci-management</report>
+							<report>dependencies</report>
+							<report>dependency-convergence</report>
+							<report>dependency-management</report>
+							<report>distribution-management</report>
+							<report>help</report>
+							<report>issue-management</report>
+							<report>mailing-lists</report>
+							<report>modules</report>
+							<report>plugin-management</report>
+							<report>plugins</report>
+							<report>team</report>
+							<report>scm</report>
+							<report>summary</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>

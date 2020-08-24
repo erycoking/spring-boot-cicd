@@ -11,9 +11,9 @@ import reactor.core.publisher.Mono;
 @RestController
 public class CicdApplication {
 
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public Mono<ResponseEntity<String>> sayHello() {
-		return Mono.just(ResponseEntity.ok().body("Hi there!!!"));
+		return Mono.just(ResponseEntity.ok().body("Hi there!!! Hooray you just configured ci cd successfully"));
 	}
 
 	public static void main(String[] args) {
