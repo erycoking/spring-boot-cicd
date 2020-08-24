@@ -10,7 +10,7 @@ services:
 # SonarCloud
 addons:
   sonarcloud:
-    organization: "cicd-applied-to-spring-boot-java-app"
+    organization: "spring-boot-cicd"
     token:
       secure: $SONAR_TOKEN # encrypted value of your token
 
