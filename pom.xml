@@ -182,6 +182,7 @@
 				<version>2.0.11</version>
 				<configuration>
 					<appName>cicd-spring-boot</appName>
+					<includeTarget>true</includeTarget>
 					<processTypes>
 						<web>java $JAVA_OPTS -jar -Dserver.port=$PORT ${full-artifact-name}</web>
 					</processTypes>
